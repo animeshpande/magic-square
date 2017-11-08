@@ -26,7 +26,6 @@ public class MagicSquare {
 				}
 			System.out.println("The sum of this row is " + sum[lineCount - 1]);
 			System.out.println();
-//			System.out.println(lineCount);
 			}
 		}
 		br.close();
