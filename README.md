@@ -5,4 +5,5 @@ This project will read a '.txt' file that contains a magic square and verify the
 
 Setup instructions:
 - Add 'src' folder as a java project
-- Add 'commons-lang3-3.6.jar' as external jar file
+- Add 'commons-lang3-3.6.jar' as external JAR to the library
+--- For Eclipse, this can be done via Project > Properties > Java Build Path > Add External JARs
