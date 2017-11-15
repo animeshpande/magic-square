@@ -7,13 +7,10 @@ public class MagicSquare {
 		Square square = new Square("Mercury.txt");
 		
 		square.printSquare();
-		System.out.println(square.getSquareDimension());
-		@SuppressWarnings("unused")
-		int[][] myMagicSquare = square.getSquare();
 		System.out.println();
-		square.printRowSums();
+		square.printRowSums(square.rowSums);
 		System.out.println();
-		square.printColumnSums();
+		square.printColumnSums(square.columnSums);
 		
 	}
 }
