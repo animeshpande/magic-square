@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.*;
-
 import org.apache.commons.lang3.StringUtils;
 
 public class Square {
@@ -19,8 +18,8 @@ public class Square {
 		fileName = name;
 		dimension = getSquareDimension();
 		square = getSquare();
-		rowSums = getRowSums(square);
-		columnSums = getColumnSums(square);
+		rowSums = getRowSums();
+		columnSums = getColumnSums();
 	}
 	
 	public BufferedReader getBufferedReader() throws FileNotFoundException {
@@ -70,7 +69,7 @@ public class Square {
 		return square;
 	}
 	
-	public void printRowSums(ArrayList<Integer> rowSums) throws IOException {
+	public void printRowSums() throws IOException {
 		
 		for (int i=0; i < dimension; i++) {
 			System.out.println("The sum for row " + (i+1) + " is " + rowSums.get(i));
@@ -78,7 +77,7 @@ public class Square {
 		
 	}
 	
-	public void printColumnSums(ArrayList<Integer> columnSums) throws IOException {
+	public void printColumnSums() throws IOException {
 		
 		for (int i=0; i < dimension; i++) {
 			System.out.println("The sum for column " + (i+1) + " is " + columnSums.get(i));
@@ -86,7 +85,7 @@ public class Square {
 		
 	}
 	
-	public ArrayList<Integer> getRowSums(int[][] square) {
+	public ArrayList<Integer> getRowSums() {
 		
 		ArrayList<Integer> rowSums = new ArrayList<Integer>();
 		
@@ -97,7 +96,7 @@ public class Square {
 		return rowSums;
 	}
 	
-	public ArrayList<Integer> getColumnSums(int[][] square){
+	public ArrayList<Integer> getColumnSums(){
 		ArrayList<Integer> columnSums = new ArrayList<Integer>();
 
 		for (int j=0; j < dimension; j++) {
@@ -112,7 +111,12 @@ public class Square {
 	}
 	
 	public boolean isMagicSquare() {
-		
+		int sum = rowSums.get(0);
+		for (int i=0; i < dimension; i++) {
+			if ( (rowSums.get(i) != sum) || (columnSums.get(i) != sum)) {
+				return false;
+			}
+		}
 		return true;
 	}
 	
