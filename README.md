@@ -2,6 +2,7 @@
 This project will read a '.txt' file that contains a magic square and verify the following:
 1. The sum of all rows is the same
 2. The sum of all columns is the same
+3. The sum of rows and columns is the same
 
 Setup instructions:
 - Add 'src' folder as a java project
@@ -15,3 +16,11 @@ Testing files:
 - Files contain number arranged in a square
 - Numbers in a row are separated by a tab ("\t")
 - Each row is on a different line
+
+Functionalities include:
+- Reading a text file
+- Printing the file
+- Converting the text file into a 2D array
+- Calculating and printing row sums
+- Calculating and printing column sums
+- Verifying if square is a magic square
